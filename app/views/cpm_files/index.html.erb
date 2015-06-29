@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpm user</th>
+      <th>Cpm task</th>
+      <th>Cpm issue</th>
+      <th>Cpm comment</th>
+      <th>File path</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_files.each do |cpm_file| %>
+      <tr>
+        <td><%= cpm_file.cpm_user_id %></td>
+        <td><%= cpm_file.cpm_task_id %></td>
+        <td><%= cpm_file.cpm_issue_id %></td>
+        <td><%= cpm_file.cpm_comment_id %></td>
+        <td><%= cpm_file.file_path %></td>
+        <td><%= link_to 'Show', cpm_file %></td>
+        <td><%= link_to 'Edit', edit_cpm_file_path(cpm_file) %></td>
+        <td><%= link_to 'Destroy', cpm_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm file', new_cpm_file_path %>

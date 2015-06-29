@@ -1,0 +1,21 @@
+<%= form_for(@cpm_process) do |f| %>
+  <% if @cpm_process.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cpm_process.errors.count, "error") %> prohibited this cpm_process from being saved:</h2>
+
+      <ul>
+      <% @cpm_process.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

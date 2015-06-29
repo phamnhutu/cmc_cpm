@@ -1,0 +1,61 @@
+<%= form_for(@cpm_issue) do |f| %>
+  <% if @cpm_issue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cpm_issue.errors.count, "error") %> prohibited this cpm_issue from being saved:</h2>
+
+      <ul>
+      <% @cpm_issue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cpm_user_id %><br>
+    <%= f.number_field :cpm_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_project_id %><br>
+    <%= f.number_field :cpm_project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :man_hour %><br>
+    <%= f.number_field :man_hour %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :assigned_to %><br>
+    <%= f.number_field :assigned_to %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_type %><br>
+    <%= f.text_field :cpm_type %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_status %><br>
+    <%= f.text_field :cpm_status %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_process_id %><br>
+    <%= f.number_field :cpm_process_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_priority_id %><br>
+    <%= f.number_field :cpm_priority_id %>
+  </div>
+  <div class="field">
+    <%= f.label :deadline %><br>
+    <%= f.datetime_select :deadline %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

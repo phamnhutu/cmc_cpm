@@ -1,0 +1,23 @@
+<header class="navbar navbar-fixed-top navbar-header">
+  <div class="container">
+    <%= link_to "", '#', id: "logo" %>
+    <div class="right">
+      <div id="util-nav" style="z-index:50" class="non-printable">
+        <ul>
+          <% if logged_in? %>
+              <li><%= link_to "Setting", '#' %></li>
+              <li><%= link_to "Log out", '#' %></li>
+          <% else %>
+              <li><%= link_to "Sing up/Log in", '#' %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="contact clear">
+        <p class="ico phone-ico"><span></span>0986 188 787</p>
+
+        <p class="ico mail-ico"><span></span><a href="mailto:dtluc@cmc.com.vn">dtluc@cmc.com.vn</a></p>
+
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,1 @@
+json.extract! @cpm_issue, :id, :cpm_user_id, :cpm_project_id, :man_hour, :name, :assigned_to, :cpm_type, :cpm_status, :cpm_process_id, :cpm_priority_id, :deadline, :description, :created_at, :updated_at

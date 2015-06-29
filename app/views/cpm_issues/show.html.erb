@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpm user:</strong>
+  <%= @cpm_issue.cpm_user_id %>
+</p>
+
+<p>
+  <strong>Cpm project:</strong>
+  <%= @cpm_issue.cpm_project_id %>
+</p>
+
+<p>
+  <strong>Man hour:</strong>
+  <%= @cpm_issue.man_hour %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cpm_issue.name %>
+</p>
+
+<p>
+  <strong>Assigned to:</strong>
+  <%= @cpm_issue.assigned_to %>
+</p>
+
+<p>
+  <strong>Cpm type:</strong>
+  <%= @cpm_issue.cpm_type %>
+</p>
+
+<p>
+  <strong>Cpm status:</strong>
+  <%= @cpm_issue.cpm_status %>
+</p>
+
+<p>
+  <strong>Cpm process:</strong>
+  <%= @cpm_issue.cpm_process_id %>
+</p>
+
+<p>
+  <strong>Cpm priority:</strong>
+  <%= @cpm_issue.cpm_priority_id %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @cpm_issue.deadline %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cpm_issue.description %>
+</p>
+
+<%= link_to 'Edit', edit_cpm_issue_path(@cpm_issue) %> |
+<%= link_to 'Back', cpm_issues_path %>

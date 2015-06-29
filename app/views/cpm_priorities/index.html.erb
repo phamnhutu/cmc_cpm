@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Priorities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_priorities.each do |cpm_priority| %>
+      <tr>
+        <td><%= cpm_priority.name %></td>
+        <td><%= cpm_priority.color %></td>
+        <td><%= link_to 'Show', cpm_priority %></td>
+        <td><%= link_to 'Edit', edit_cpm_priority_path(cpm_priority) %></td>
+        <td><%= link_to 'Destroy', cpm_priority, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm priority', new_cpm_priority_path %>

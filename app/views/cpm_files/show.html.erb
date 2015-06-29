@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpm user:</strong>
+  <%= @cpm_file.cpm_user_id %>
+</p>
+
+<p>
+  <strong>Cpm task:</strong>
+  <%= @cpm_file.cpm_task_id %>
+</p>
+
+<p>
+  <strong>Cpm issue:</strong>
+  <%= @cpm_file.cpm_issue_id %>
+</p>
+
+<p>
+  <strong>Cpm comment:</strong>
+  <%= @cpm_file.cpm_comment_id %>
+</p>
+
+<p>
+  <strong>File path:</strong>
+  <%= @cpm_file.file_path %>
+</p>
+
+<%= link_to 'Edit', edit_cpm_file_path(@cpm_file) %> |
+<%= link_to 'Back', cpm_files_path %>

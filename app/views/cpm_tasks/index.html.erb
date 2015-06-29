@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpm user</th>
+      <th>Cpm project</th>
+      <th>Name</th>
+      <th>Assigned to</th>
+      <th>Deadline</th>
+      <th>Cpm process</th>
+      <th>Cpm priority</th>
+      <th>Man hour</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_tasks.each do |cpm_task| %>
+      <tr>
+        <td><%= cpm_task.cpm_user_id %></td>
+        <td><%= cpm_task.cpm_project_id %></td>
+        <td><%= cpm_task.name %></td>
+        <td><%= cpm_task.assigned_to %></td>
+        <td><%= cpm_task.deadline %></td>
+        <td><%= cpm_task.cpm_process_id %></td>
+        <td><%= cpm_task.cpm_priority_id %></td>
+        <td><%= cpm_task.man_hour %></td>
+        <td><%= link_to 'Show', cpm_task %></td>
+        <td><%= link_to 'Edit', edit_cpm_task_path(cpm_task) %></td>
+        <td><%= link_to 'Destroy', cpm_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm task', new_cpm_task_path %>

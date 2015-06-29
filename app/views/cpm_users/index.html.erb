@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Permit</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Pasword digest</th>
+      <th>Remember digest</th>
+      <th>Activation digest</th>
+      <th>Gender</th>
+      <th>Phone number</th>
+      <th>Address</th>
+      <th>Facebook url</th>
+      <th>Your story</th>
+      <th>Status</th>
+      <th>Cpm team</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_users.each do |cpm_user| %>
+      <tr>
+        <td><%= cpm_user.first_name %></td>
+        <td><%= cpm_user.last_name %></td>
+        <td><%= cpm_user.permit %></td>
+        <td><%= cpm_user.username %></td>
+        <td><%= cpm_user.email %></td>
+        <td><%= cpm_user.pasword_digest %></td>
+        <td><%= cpm_user.remember_digest %></td>
+        <td><%= cpm_user.activation_digest %></td>
+        <td><%= cpm_user.gender %></td>
+        <td><%= cpm_user.phone_number %></td>
+        <td><%= cpm_user.address %></td>
+        <td><%= cpm_user.facebook_url %></td>
+        <td><%= cpm_user.your_story %></td>
+        <td><%= cpm_user.status %></td>
+        <td><%= cpm_user.cpm_team_id %></td>
+        <td><%= link_to 'Show', cpm_user %></td>
+        <td><%= link_to 'Edit', edit_cpm_user_path(cpm_user) %></td>
+        <td><%= link_to 'Destroy', cpm_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm user', new_cpm_user_path %>

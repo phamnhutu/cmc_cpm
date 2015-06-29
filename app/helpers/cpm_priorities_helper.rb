@@ -1,0 +1,2 @@
+module CpmPrioritiesHelper
+end

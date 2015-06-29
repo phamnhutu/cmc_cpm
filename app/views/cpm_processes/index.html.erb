@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Processes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_processes.each do |cpm_process| %>
+      <tr>
+        <td><%= cpm_process.name %></td>
+        <td><%= link_to 'Show', cpm_process %></td>
+        <td><%= link_to 'Edit', edit_cpm_process_path(cpm_process) %></td>
+        <td><%= link_to 'Destroy', cpm_process, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm process', new_cpm_process_path %>

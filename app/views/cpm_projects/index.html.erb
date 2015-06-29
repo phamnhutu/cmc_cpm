@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpm user</th>
+      <th>Name</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_projects.each do |cpm_project| %>
+      <tr>
+        <td><%= cpm_project.cpm_user_id %></td>
+        <td><%= cpm_project.name %></td>
+        <td><%= cpm_project.start_date %></td>
+        <td><%= cpm_project.end_date %></td>
+        <td><%= cpm_project.status %></td>
+        <td><%= link_to 'Show', cpm_project %></td>
+        <td><%= link_to 'Edit', edit_cpm_project_path(cpm_project) %></td>
+        <td><%= link_to 'Destroy', cpm_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm project', new_cpm_project_path %>

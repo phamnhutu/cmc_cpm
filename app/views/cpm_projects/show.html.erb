@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpm user:</strong>
+  <%= @cpm_project.cpm_user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cpm_project.name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @cpm_project.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @cpm_project.end_date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cpm_project.status %>
+</p>
+
+<%= link_to 'Edit', edit_cpm_project_path(@cpm_project) %> |
+<%= link_to 'Back', cpm_projects_path %>

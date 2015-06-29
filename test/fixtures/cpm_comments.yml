@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpm_user_id: 1
+  cpm_issue_id: 1
+  cpm_task_id: 1
+  cpm_project_id: 1
+  content: MyString
+  attachments: MyString
+
+two:
+  cpm_user_id: 1
+  cpm_issue_id: 1
+  cpm_task_id: 1
+  cpm_project_id: 1
+  content: MyString
+  attachments: MyString

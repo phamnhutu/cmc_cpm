@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cpm_team.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cpm_team.status %>
+</p>
+
+<%= link_to 'Edit', edit_cpm_team_path(@cpm_team) %> |
+<%= link_to 'Back', cpm_teams_path %>

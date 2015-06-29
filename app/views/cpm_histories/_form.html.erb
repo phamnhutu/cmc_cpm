@@ -1,0 +1,37 @@
+<%= form_for(@cpm_history) do |f| %>
+  <% if @cpm_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cpm_history.errors.count, "error") %> prohibited this cpm_history from being saved:</h2>
+
+      <ul>
+      <% @cpm_history.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cpm_user_id %><br>
+    <%= f.number_field :cpm_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_project_id %><br>
+    <%= f.number_field :cpm_project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_task_id %><br>
+    <%= f.number_field :cpm_task_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_issue_id %><br>
+    <%= f.number_field :cpm_issue_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

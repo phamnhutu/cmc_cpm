@@ -1,0 +1,192 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/* mixins, variables, etc. */
+$gray-medium-light: #eaeaea;
+/* universal */
+body {
+  padding-top: 60px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  color: #333;
+  line-height: 20px;
+}
+section {
+  over�ow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+p{
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+/* header */
+.navbar-header{
+  height:80px;
+  background: #ffffff;
+  .container{
+    height: 80px;
+  }
+  .right{
+    margin-top: 10px;
+    float: right;
+    display: inline;
+  }
+  #util-nav {
+    color: #555;
+    float: right;
+    font-size: 11px;
+    line-height: 25px;
+    clear: both !important;
+    ul li{
+      float: left;
+      font-size: 110%;
+      list-style-type: none;
+      padding: 0px 5px;
+    }
+  }
+
+  .contact {
+    float: right;
+    padding-top: 10px;
+    clear: both;
+    p.ico span {
+      background: transparent url("ico.png") no-repeat scroll 0px 0px;
+      width: 16px;
+      height: 15px;
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0px;
+    }
+    p.phone-ico {
+      padding-right: 27px;
+    }
+    p {
+      float: left;
+      padding-left: 24px;
+      position: relative;
+      font-size: 14px;
+      color: #555;
+    }
+  }
+}
+#logo {
+  float: left;
+  margin-right: 10px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  background: rgba(0, 0, 0, 0) url("logo.png") no-repeat scroll 0 0;
+  display: block;
+  height: 50px;
+  width:180px;
+  position: absolute;
+  top: 20px;
+}
+.blueDiv {
+  background-color: #0071b7;
+  h2 {
+    color: #fff;
+    margin-bottom: 0px;
+    text-align: left;
+    padding: 0 0 0 10px;
+    font-size: 22px;
+  }
+}
+.services {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+#navigation {
+  background: #2773AE none repeat scroll 0px 0px;
+  height: 40px;
+  font-size: 14px;
+  position: relative;
+  ul,ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: outside none none;
+  }
+  ul li {
+    float: left;
+    padding-right: 20px;
+    line-height: 40px;
+    position: relative;
+  }
+  ul li a {
+    color: #F7FBFC;
+    position: relative;
+    float: left;
+    padding: 0px 10px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a{
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    foat: left;
+  }
+  ul {
+    foat: right;
+    list-style: none;
+    li {
+      foat: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/*  */
+.txtleft{
+  text-align: left;
+}
+.txtupper{
+ // text-transform: uppercase;
+}
+.txtcap{
+  text-transform: capitalize;
+}
+ul{
+  list-style: none;
+}
+ul li{
+  float: left;
+}

@@ -1,0 +1,20 @@
+<%provide(:action, @action)%>
+<div class="services blueDiv txtleft txtupper">
+  <% if logged_in? %>
+      <nav id="navigation" class="non-printable">
+        <div class="shell">
+          <ul>
+            <li class=""><a href="http://115.146.126.146/cpm/en/dashboard">Home</a></li>
+            <li class=""><%= link_to "Projects", '#', class:"ottom-arr"%></li>
+            <li class=""><%= link_to "Members", '#' , class:"ottom-arr"%></li>
+            <li class=""><a href="http://115.146.126.146/cpm/en/teams"><span class="bottom-arr"></span>Teams</a></li>
+          </ul>
+        </div>
+      </nav>
+  <% else %>
+  <div class="shell">
+    <h2 class="txtupper"><%= yield(:action)%></h2>
+  </div>
+  <% end %>
+  <div class="clear"></div>
+</div>

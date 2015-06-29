@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cpm user</th>
+      <th>Name</th>
+      <th>Cpm project</th>
+      <th>Cpm task</th>
+      <th>Cpm issue</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_histories.each do |cpm_history| %>
+      <tr>
+        <td><%= cpm_history.cpm_user_id %></td>
+        <td><%= cpm_history.name %></td>
+        <td><%= cpm_history.cpm_project_id %></td>
+        <td><%= cpm_history.cpm_task_id %></td>
+        <td><%= cpm_history.cpm_issue_id %></td>
+        <td><%= link_to 'Show', cpm_history %></td>
+        <td><%= link_to 'Edit', edit_cpm_history_path(cpm_history) %></td>
+        <td><%= link_to 'Destroy', cpm_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm history', new_cpm_history_path %>

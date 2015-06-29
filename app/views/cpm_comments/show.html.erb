@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpm user:</strong>
+  <%= @cpm_comment.cpm_user_id %>
+</p>
+
+<p>
+  <strong>Cpm issue:</strong>
+  <%= @cpm_comment.cpm_issue_id %>
+</p>
+
+<p>
+  <strong>Cpm task:</strong>
+  <%= @cpm_comment.cpm_task_id %>
+</p>
+
+<p>
+  <strong>Cpm project:</strong>
+  <%= @cpm_comment.cpm_project_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @cpm_comment.content %>
+</p>
+
+<p>
+  <strong>Attachments:</strong>
+  <%= @cpm_comment.attachments %>
+</p>
+
+<%= link_to 'Edit', edit_cpm_comment_path(@cpm_comment) %> |
+<%= link_to 'Back', cpm_comments_path %>

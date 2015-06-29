@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpm_user_id: 1
+  cpm_project_id: 1
+  name: MyString
+  assigned_to: 1
+  deadline: 2015-06-25 09:35:39
+  cpm_process_id: 1
+  cpm_priority_id: 1
+  man_hour: MyString
+
+two:
+  cpm_user_id: 1
+  cpm_project_id: 1
+  name: MyString
+  assigned_to: 1
+  deadline: 2015-06-25 09:35:39
+  cpm_process_id: 1
+  cpm_priority_id: 1
+  man_hour: MyString

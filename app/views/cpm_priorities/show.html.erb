@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cpm_priority.name %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @cpm_priority.color %>
+</p>
+
+<%= link_to 'Edit', edit_cpm_priority_path(@cpm_priority) %> |
+<%= link_to 'Back', cpm_priorities_path %>

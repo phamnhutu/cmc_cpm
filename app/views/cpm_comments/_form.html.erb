@@ -1,0 +1,41 @@
+<%= form_for(@cpm_comment) do |f| %>
+  <% if @cpm_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cpm_comment.errors.count, "error") %> prohibited this cpm_comment from being saved:</h2>
+
+      <ul>
+      <% @cpm_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cpm_user_id %><br>
+    <%= f.number_field :cpm_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_issue_id %><br>
+    <%= f.number_field :cpm_issue_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_task_id %><br>
+    <%= f.number_field :cpm_task_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cpm_project_id %><br>
+    <%= f.number_field :cpm_project_id %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :attachments %><br>
+    <%= f.text_field :attachments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

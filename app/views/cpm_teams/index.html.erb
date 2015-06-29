@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cpm Teams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cpm_teams.each do |cpm_team| %>
+      <tr>
+        <td><%= cpm_team.name %></td>
+        <td><%= cpm_team.status %></td>
+        <td><%= link_to 'Show', cpm_team %></td>
+        <td><%= link_to 'Edit', edit_cpm_team_path(cpm_team) %></td>
+        <td><%= link_to 'Destroy', cpm_team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cpm team', new_cpm_team_path %>

@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @cpm_user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @cpm_user.last_name %>
+</p>
+
+<p>
+  <strong>Permit:</strong>
+  <%= @cpm_user.permit %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @cpm_user.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cpm_user.email %>
+</p>
+
+<p>
+  <strong>Pasword digest:</strong>
+  <%= @cpm_user.pasword_digest %>
+</p>
+
+<p>
+  <strong>Remember digest:</strong>
+  <%= @cpm_user.remember_digest %>
+</p>
+
+<p>
+  <strong>Activation digest:</strong>
+  <%= @cpm_user.activation_digest %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @cpm_user.gender %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @cpm_user.phone_number %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @cpm_user.address %>
+</p>
+
+<p>
+  <strong>Facebook url:</strong>
+  <%= @cpm_user.facebook_url %>
+</p>
+
+<p>
+  <strong>Your story:</strong>
+  <%= @cpm_user.your_story %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @cpm_user.status %>
+</p>
+
+<p>
+  <strong>Cpm team:</strong>
+  <%= @cpm_user.cpm_team_id %>
+</p>
+
+<%= link_to 'Edit', edit_cpm_user_path(@cpm_user) %> |
+<%= link_to 'Back', cpm_users_path %>
